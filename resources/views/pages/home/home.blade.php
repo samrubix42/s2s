@@ -120,10 +120,10 @@ new class extends Component
                         <img src="/assets/img/shop.png" alt="S2S Steel Fabrication" class="w-full h-[400px] lg:h-[500px] object-cover">
                     </div>
                     {{-- Floating badge --}}
-                    <div class="absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-xl shadow-2xl hidden md:block">
+                    <!-- <div class="absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-xl shadow-2xl hidden md:block">
                         <span class="text-3xl font-oswald font-bold block leading-none">15+</span>
                         <span class="text-xs text-white/80 uppercase tracking-wider">Years of<br>Excellence</span>
-                    </div>
+                    </div> -->
                     {{-- Accent border --}}
                     <div class="absolute -top-4 -left-4 w-full h-full border-2 border-secondary/20 rounded-2xl -z-10"></div>
                 </div>
@@ -284,7 +284,7 @@ new class extends Component
     <section class="py-24 bg-accent relative overflow-hidden">
         {{-- Decorative --}}
         <div class="absolute top-0 left-0 w-full h-full opacity-5"
-             style="background-image: url('/assets/img/hero.png'); background-size: cover; background-position: center;">
+             style="background-image: url('/assets/img/footer-bg.png'); background-size: cover; background-position: center;">
         </div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -356,110 +356,152 @@ new class extends Component
         </div>
     </section>
 
-    {{-- ==================== CONTACT FORM ==================== --}}
-    <section id="contact" class="py-24 bg-surface">
+    {{-- ==================== TRUSTED BY / SEPARATOR ==================== --}}
+    <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-            {{-- Section Header --}}
-            <div class="text-center mb-16">
-                <div class="inline-flex items-center space-x-3 mb-4">
-                    <span class="w-8 h-px bg-secondary"></span>
-                    <span class="text-primary text-xs font-bold tracking-[0.2em] uppercase">Get In Touch</span>
-                    <span class="w-8 h-px bg-secondary"></span>
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
+                <div class="text-center lg:text-left">
+                    <h3 class="text-2xl font-bold text-steel tracking-tight mb-2">Trusted by Builders Worldwide</h3>
+                    <p class="text-gray-500 text-sm">Delivering precision engineering across residential, commercial, and industrial sectors.</p>
                 </div>
-                <h2 class="text-3xl lg:text-4xl font-bold text-steel mb-4 tracking-tight">
-                    Let's Build <span class="text-primary">Together</span>
-                </h2>
-                <p class="text-gray-500 max-w-xl mx-auto leading-relaxed">
-                    Have a project in mind? Fill out the form and our engineering team will get back to you within 24 hours.
-                </p>
+                <div class="flex items-center space-x-8 lg:space-x-12">
+                    <div class="text-center">
+                        <p class="text-3xl font-bold text-primary">500<span class="text-secondary">+</span></p>
+                        <p class="text-gray-400 text-xs uppercase tracking-wider mt-1">Projects</p>
+                    </div>
+                    <div class="w-px h-12 bg-gray-200"></div>
+                    <div class="text-center">
+                        <p class="text-3xl font-bold text-primary">15<span class="text-secondary">+</span></p>
+                        <p class="text-gray-400 text-xs uppercase tracking-wider mt-1">Countries</p>
+                    </div>
+                    <div class="w-px h-12 bg-gray-200"></div>
+                    <div class="text-center">
+                        <p class="text-3xl font-bold text-primary">98<span class="text-secondary">%</span></p>
+                        <p class="text-gray-400 text-xs uppercase tracking-wider mt-1">Satisfaction</p>
+                    </div>
+                </div>
             </div>
+        </div>
+    </section>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+    {{-- ==================== CONTACT / GET A QUOTE ==================== --}}
+    <section id="contact" class="relative py-24 lg:py-28 overflow-hidden">
+        {{-- Dark background with image overlay --}}
+        <div class="absolute inset-0 bg-accent"></div>
+        <div class="absolute inset-0 opacity-[0.07]"
+             style="background-image: url('/assets/img/shop.png'); background-size: cover; background-position: center;"></div>
+        {{-- Gradient overlays --}}
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 blur-[150px] rounded-full"></div>
+        <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-secondary/10 blur-[120px] rounded-full"></div>
 
-                {{-- Left: Contact Info + Image --}}
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+                {{-- Left: Headline + Contact Info --}}
                 <div>
-                    {{-- Contact details --}}
-                    <div class="space-y-4 mb-8">
-                        <div class="flex items-center space-x-4 p-4 bg-white rounded-xl border border-gray-100">
-                            <div class="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    <div class="inline-flex items-center space-x-3 mb-6">
+                        <span class="w-8 h-px bg-secondary"></span>
+                        <span class="text-secondary text-xs font-bold tracking-[0.25em] uppercase">Start Your Project</span>
+                    </div>
+
+                    <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6 tracking-tight leading-[1.15]">
+                        Ready to Build<br>
+                        <span class="text-secondary">Something Great?</span>
+                    </h2>
+
+                    <p class="text-gray-400 text-base lg:text-lg leading-relaxed mb-10 max-w-lg">
+                        Get a professional consultation for your next steel construction project. Our engineering team delivers precision-built solutions tailored to your needs.
+                    </p>
+
+                    {{-- Compact contact info --}}
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
+                                <svg class="w-5 h-5 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                             </div>
                             <div>
-                                <p class="text-xs text-gray-400 font-bold uppercase tracking-wider">Email Us</p>
-                                <a href="mailto:info@s2sdesigns.com" class="text-steel text-sm font-medium hover:text-primary transition-colors">info@s2sdesigns.com</a>
+                                <p class="text-gray-500 text-[10px] font-bold uppercase tracking-widest">Email</p>
+                                <a href="mailto:info@s2sdesigns.com" class="text-white text-sm hover:text-secondary transition-colors">info@s2sdesigns.com</a>
                             </div>
                         </div>
-
-                        <div class="flex items-center space-x-4 p-4 bg-white rounded-xl border border-gray-100">
-                            <div class="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
+                                <svg class="w-5 h-5 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
                             </div>
                             <div>
-                                <p class="text-xs text-gray-400 font-bold uppercase tracking-wider">Call Us</p>
-                                <span class="text-steel text-sm font-medium">+1 (XXX) XXX-XXXX</span>
+                                <p class="text-gray-500 text-[10px] font-bold uppercase tracking-widest">Phone</p>
+                                <span class="text-white text-sm">+1 (XXX) XXX-XXXX</span>
                             </div>
                         </div>
-
-                        <div class="flex items-center space-x-4 p-4 bg-white rounded-xl border border-gray-100">
-                            <div class="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
+                                <svg class="w-5 h-5 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
                             </div>
                             <div>
-                                <p class="text-xs text-gray-400 font-bold uppercase tracking-wider">Offices</p>
-                                <span class="text-steel text-sm font-medium">Canada & India</span>
+                                <p class="text-gray-500 text-[10px] font-bold uppercase tracking-widest">Offices</p>
+                                <span class="text-white text-sm">Canada & India</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
+                                <svg class="w-5 h-5 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            </div>
+                            <div>
+                                <p class="text-gray-500 text-[10px] font-bold uppercase tracking-widest">Response</p>
+                                <span class="text-white text-sm">Within 24 Hours</span>
                             </div>
                         </div>
                     </div>
 
-                    {{-- Image --}}
-                    <div class="rounded-2xl overflow-hidden">
-                        <img src="/assets/img/hero.png" alt="S2S Engineering Team" class="w-full h-[280px] object-cover">
+                    {{-- Quick promise --}}
+                    <div class="flex items-center space-x-4 pt-6 border-t border-white/10">
+                        <svg class="w-5 h-5 text-secondary shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                        <p class="text-gray-400 text-sm">Free consultation · No obligation · Response within 24 hours</p>
                     </div>
                 </div>
 
-                {{-- Right: Form --}}
+                {{-- Right: Form Card --}}
                 <div>
-                    <div class="bg-white rounded-2xl p-8 lg:p-10 border border-gray-100">
+                    <div class="bg-white rounded-2xl p-8 lg:p-10">
                         <h3 class="text-xl font-bold text-steel mb-1 tracking-tight">Request a Free Consultation</h3>
-                        <p class="text-gray-400 text-sm mb-8">Fill in the details below and we'll get back to you shortly.</p>
+                        <p class="text-gray-400 text-sm mb-6">Tell us about your project and we'll get back to you shortly.</p>
 
-                        <form action="#" method="POST" class="space-y-5">
+                        <form action="#" method="POST" class="space-y-4">
                             @csrf
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div>
-                                    <label for="first_name" class="block text-xs font-bold text-steel uppercase tracking-wider mb-2">First Name</label>
+                                    <label for="first_name" class="block text-xs font-bold text-steel uppercase tracking-wider mb-1.5">First Name</label>
                                     <input type="text" id="first_name" name="first_name" required
-                                           class="w-full px-4 py-3 bg-surface border border-gray-200 rounded-lg text-sm text-steel placeholder:text-gray-400 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors"
+                                           class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-sm text-steel placeholder:text-gray-400 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors"
                                            placeholder="John">
                                 </div>
                                 <div>
-                                    <label for="last_name" class="block text-xs font-bold text-steel uppercase tracking-wider mb-2">Last Name</label>
+                                    <label for="last_name" class="block text-xs font-bold text-steel uppercase tracking-wider mb-1.5">Last Name</label>
                                     <input type="text" id="last_name" name="last_name" required
-                                           class="w-full px-4 py-3 bg-surface border border-gray-200 rounded-lg text-sm text-steel placeholder:text-gray-400 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors"
+                                           class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-sm text-steel placeholder:text-gray-400 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors"
                                            placeholder="Doe">
                                 </div>
                             </div>
 
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div>
-                                    <label for="email" class="block text-xs font-bold text-steel uppercase tracking-wider mb-2">Email</label>
+                                    <label for="email" class="block text-xs font-bold text-steel uppercase tracking-wider mb-1.5">Email</label>
                                     <input type="email" id="email" name="email" required
-                                           class="w-full px-4 py-3 bg-surface border border-gray-200 rounded-lg text-sm text-steel placeholder:text-gray-400 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors"
+                                           class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-sm text-steel placeholder:text-gray-400 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors"
                                            placeholder="john@company.com">
                                 </div>
                                 <div>
-                                    <label for="phone" class="block text-xs font-bold text-steel uppercase tracking-wider mb-2">Phone</label>
+                                    <label for="phone" class="block text-xs font-bold text-steel uppercase tracking-wider mb-1.5">Phone</label>
                                     <input type="tel" id="phone" name="phone"
-                                           class="w-full px-4 py-3 bg-surface border border-gray-200 rounded-lg text-sm text-steel placeholder:text-gray-400 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors"
+                                           class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-sm text-steel placeholder:text-gray-400 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors"
                                            placeholder="+1 (XXX) XXX-XXXX">
                                 </div>
                             </div>
 
                             <div>
-                                <label for="service" class="block text-xs font-bold text-steel uppercase tracking-wider mb-2">Service Required</label>
+                                <label for="service" class="block text-xs font-bold text-steel uppercase tracking-wider mb-1.5">Service Required</label>
                                 <select id="service" name="service"
-                                        class="w-full px-4 py-3 bg-surface border border-gray-200 rounded-lg text-sm text-steel focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors appearance-none"
+                                        class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-sm text-steel focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors appearance-none"
                                         style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%2212%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23666%22 stroke-width=%222%22><path d=%22M6 9l6 6 6-6%22/></svg>'); background-repeat: no-repeat; background-position: right 1rem center;">
                                     <option value="">Select a service</option>
                                     <option value="structural">Structural Design & Engineering</option>
@@ -472,21 +514,17 @@ new class extends Component
                             </div>
 
                             <div>
-                                <label for="message" class="block text-xs font-bold text-steel uppercase tracking-wider mb-2">Project Details</label>
-                                <textarea id="message" name="message" rows="4"
-                                          class="w-full px-4 py-3 bg-surface border border-gray-200 rounded-lg text-sm text-steel placeholder:text-gray-400 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors resize-none"
-                                          placeholder="Tell us about your project requirements, timeline, and any specific needs..."></textarea>
+                                <label for="message" class="block text-xs font-bold text-steel uppercase tracking-wider mb-1.5">Project Details</label>
+                                <textarea id="message" name="message" rows="3"
+                                          class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-sm text-steel placeholder:text-gray-400 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors resize-none"
+                                          placeholder="Tell us about your project requirements..."></textarea>
                             </div>
 
                             <button type="submit"
-                                    class="w-full bg-primary text-white py-4 rounded-lg font-bold text-sm uppercase tracking-wider hover:bg-primary-dark transition-all duration-300 flex items-center justify-center space-x-2">
-                                <span>Submit Inquiry</span>
+                                    class="w-full bg-primary text-white py-4 rounded-lg font-bold text-sm uppercase tracking-wider hover:bg-secondary transition-all duration-300 flex items-center justify-center space-x-2">
+                                <span>Get Your Free Quote</span>
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                             </button>
-
-                            <p class="text-gray-400 text-xs text-center">
-                                By submitting, you agree to our <a href="#" class="text-primary hover:underline">Privacy Policy</a>. We'll respond within 24 hours.
-                            </p>
                         </form>
                     </div>
                 </div>

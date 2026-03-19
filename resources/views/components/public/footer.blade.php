@@ -156,22 +156,7 @@ new class extends Component
                 </div>
             </div>
 
-            {{-- Newsletter strip --}}
-            <div class="border-t border-white/5 py-10">
-                <div class="flex flex-col lg:flex-row items-center justify-between gap-6">
-                    <div>
-                        <h5 class="text-white font-oswald text-base uppercase tracking-wider">Stay Updated</h5>
-                        <p class="text-gray-500 text-xs mt-1">Get the latest news on steel construction and engineering innovations.</p>
-                    </div>
-                    <div class="flex w-full lg:w-auto">
-                        <input type="email" placeholder="Enter your email"
-                               class="bg-white/5 border border-white/10 text-white text-sm px-5 py-3 rounded-l-lg focus:outline-none focus:border-secondary/50 w-full lg:w-72 placeholder:text-gray-500">
-                        <button class="bg-secondary text-white px-6 py-3 rounded-r-lg font-bold text-sm uppercase tracking-wider hover:bg-primary transition-colors shrink-0">
-                            Subscribe
-                        </button>
-                    </div>
-                </div>
-            </div>
+        
         </div>
 
         {{-- Bottom bar --}}
