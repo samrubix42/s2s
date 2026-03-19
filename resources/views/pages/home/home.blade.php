@@ -26,7 +26,7 @@ new class extends Component
         <div class="absolute bottom-0 right-0 w-96 h-96 bg-primary/20 blur-[150px] rounded-full"></div>
         <div class="absolute top-1/4 right-1/4 w-64 h-64 bg-secondary/10 blur-[100px] rounded-full"></div>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-32 pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-0 md:pt-32 pb-0 md:pb-20">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 {{-- Left: Content --}}
                 <div class="animate-fade-up">
@@ -468,61 +468,37 @@ new class extends Component
 
                         <form action="#" method="POST" class="space-y-4">
                             @csrf
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <div>
-                                    <label for="first_name" class="block text-xs font-bold text-steel uppercase tracking-wider mb-1.5">First Name</label>
-                                    <input type="text" id="first_name" name="first_name" required
-                                           class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-sm text-steel placeholder:text-gray-400 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors"
-                                           placeholder="John">
-                                </div>
-                                <div>
-                                    <label for="last_name" class="block text-xs font-bold text-steel uppercase tracking-wider mb-1.5">Last Name</label>
-                                    <input type="text" id="last_name" name="last_name" required
-                                           class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-sm text-steel placeholder:text-gray-400 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors"
-                                           placeholder="Doe">
-                                </div>
-                            </div>
-
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <div>
-                                    <label for="email" class="block text-xs font-bold text-steel uppercase tracking-wider mb-1.5">Email</label>
-                                    <input type="email" id="email" name="email" required
-                                           class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-sm text-steel placeholder:text-gray-400 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors"
-                                           placeholder="john@company.com">
-                                </div>
-                                <div>
-                                    <label for="phone" class="block text-xs font-bold text-steel uppercase tracking-wider mb-1.5">Phone</label>
-                                    <input type="tel" id="phone" name="phone"
-                                           class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-sm text-steel placeholder:text-gray-400 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors"
-                                           placeholder="+1 (XXX) XXX-XXXX">
-                                </div>
+                            <div>
+                                <label for="full_name" class="block text-xs font-bold text-steel uppercase tracking-wider mb-1.5">Full Name</label>
+                                <input type="text" id="full_name" name="full_name" required
+                                       class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-sm text-steel placeholder:text-gray-400 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors"
+                                       placeholder="John Doe">
                             </div>
 
                             <div>
-                                <label for="service" class="block text-xs font-bold text-steel uppercase tracking-wider mb-1.5">Service Required</label>
-                                <select id="service" name="service"
-                                        class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-sm text-steel focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors appearance-none"
-                                        style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%2212%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23666%22 stroke-width=%222%22><path d=%22M6 9l6 6 6-6%22/></svg>'); background-repeat: no-repeat; background-position: right 1rem center;">
-                                    <option value="">Select a service</option>
-                                    <option value="structural">Structural Design & Engineering</option>
-                                    <option value="bim">BIM & 3D Modeling</option>
-                                    <option value="lgsf">LGSF Framing & Detailing</option>
-                                    <option value="connection">Connection Design</option>
-                                    <option value="modular">Modular Construction</option>
-                                    <option value="other">Other / General Inquiry</option>
-                                </select>
+                                <label for="email" class="block text-xs font-bold text-steel uppercase tracking-wider mb-1.5">Email Address</label>
+                                <input type="email" id="email" name="email" required
+                                       class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-sm text-steel placeholder:text-gray-400 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors"
+                                       placeholder="john@company.com">
                             </div>
 
                             <div>
-                                <label for="message" class="block text-xs font-bold text-steel uppercase tracking-wider mb-1.5">Project Details</label>
-                                <textarea id="message" name="message" rows="3"
+                                <label for="phone" class="block text-xs font-bold text-steel uppercase tracking-wider mb-1.5">Phone Number</label>
+                                <input type="tel" id="phone" name="phone"
+                                       class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-sm text-steel placeholder:text-gray-400 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors"
+                                       placeholder="+1 (XXX) XXX-XXXX">
+                            </div>
+
+                            <div>
+                                <label for="message" class="block text-xs font-bold text-steel uppercase tracking-wider mb-1.5">Message</label>
+                                <textarea id="message" name="message" rows="4"
                                           class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-sm text-steel placeholder:text-gray-400 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors resize-none"
-                                          placeholder="Tell us about your project requirements..."></textarea>
+                                          placeholder="How can we help you?"></textarea>
                             </div>
 
                             <button type="submit"
                                     class="w-full bg-primary text-white py-4 rounded-lg font-bold text-sm uppercase tracking-wider hover:bg-secondary transition-all duration-300 flex items-center justify-center space-x-2">
-                                <span>Get Your Free Quote</span>
+                                <span>Send Message</span>
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                             </button>
                         </form>

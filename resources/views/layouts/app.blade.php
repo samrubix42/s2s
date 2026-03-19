@@ -12,6 +12,8 @@
 
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+
         @livewireStyles
     </head>
     <body class="font-sans antialiased text-steel bg-white">

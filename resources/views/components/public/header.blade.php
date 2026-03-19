@@ -29,7 +29,7 @@ new class extends Component
                     </span>
                     <span class="text-[9px] px-[1px] font-bold tracking-[0.25em] leading-none mt-0.5 transition-colors duration-300"
                         :class="scrolled ? 'text-secondary' : 'text-secondary'">
-                        BUILDING GREEN  With Innovation & Technology
+                        BUILDING GREEN
                     </span>
                    
                 </div>
@@ -49,12 +49,10 @@ new class extends Component
             </nav>
 
             {{-- Mobile button --}}
-            <button @click="open = !open" class="lg:hidden p-2 rounded-lg transition-colors"
+            <button @click="open = !open" class="lg:hidden p-2 rounded-lg transition-colors flex items-center justify-center"
                 :class="scrolled ? 'text-steel' : 'text-white'">
-                <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path x-show="!open" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-                    <path x-show="open" stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
+                <i x-show="!open" class="ri-menu-3-fill text-2xl"></i>
+                <i x-show="open" class="ri-close-line text-2xl"></i>
             </button>
         </div>
     </div>
