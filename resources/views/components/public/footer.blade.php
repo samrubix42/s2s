@@ -47,11 +47,17 @@ new class extends Component
 
                 {{-- Brand Column (wider) --}}
                 <div class="lg:col-span-4">
-                    <a href="/" class="flex items-center space-x-3 mb-6 group">
-                        <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-white font-oswald font-bold text-xl shadow-lg transition-transform group-hover:scale-105">S2S</div>
-                        <div>
-                            <span class="text-lg font-oswald font-bold text-white block leading-none tracking-tight">S2S DESIGNS</span>
-                            <span class="text-[8px] font-bold text-secondary tracking-[0.25em] leading-none mt-0.5 block">PVT. LTD. — BUILDING GREEN</span>
+                    <a href="/" class="flex items-center space-x-3 mb-8 group">
+                        <div class="w-12 h-auto flex items-center justify-center text-white font-oswald font-bold text-xl transition-transform group-hover:scale-105">
+                            <img src="{{asset('assets/img/logos2.png')}}" alt="S2S Designs Logo">
+                        </div>
+                        <div class="flex flex-col justify-center space-y-1">
+                            <span class="text-xl font-oswald font-bold leading-none tracking-tight text-white transition-colors duration-300">
+                                Designs Pvt. Ltd.
+                            </span>
+                            <span class="text-[9px] px-[1px] font-bold tracking-[0.25em] leading-none mt-0.5 text-secondary">
+                                BUILDING GREEN
+                            </span>
                         </div>
                     </a>
                     <p class="text-gray-400 text-sm leading-relaxed mb-6 max-w-xs">
