@@ -3,14 +3,18 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="S2S Designs Pvt. Ltd. – Premier engineering & design firm specializing in sustainable steel framing, BIM modeling, and modular construction solutions.">
 
-        <title>{{ $title ?? config('app.name') }}</title>
+        <title>{{ $title ?? 'S2S Designs Pvt. Ltd. | Building Green' }}</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
         @livewireStyles
     </head>
-    <body class="font-sans antialiased text-gray-900 bg-white">
+    <body class="font-sans antialiased text-steel bg-white">
         <livewire:public.header />
         
         <main>
