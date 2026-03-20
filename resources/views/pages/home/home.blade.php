@@ -32,7 +32,7 @@ new class extends Component
                 <div class="animate-fade-up">
                     <div class="inline-flex items-center space-x-3 mb-8">
                         <span class="h-px w-10 bg-secondary"></span>
-                        <span class="text-secondary text-xs font-bold tracking-[0.3em] uppercase">Engineering Excellence</span>
+                        <span class="text-gra text-xs font-bold tracking-[0.3em] uppercase">Engineering Excellence</span>
                     </div>
 
                     <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-8 leading-[1.05] tracking-tight">
