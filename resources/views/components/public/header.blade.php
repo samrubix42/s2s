@@ -8,71 +8,123 @@ new class extends Component
 };
 ?>
 
-<header x-data="{ open: false, scrolled: false }" @scroll.window="scrolled = (window.pageYOffset > 50)"
-    class="fixed top-0 left-0 w-full z-50 transition-all duration-500"
-    :class="scrolled ? 'bg-white shadow-lg border-b border-gray-100' : 'bg-transparent'">
+<header
+    x-data="{ open: false, scrolled: false }"
+    @scroll.window="scrolled = window.scrollY > 50"
+    class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
 
-    {{-- Top accent bar --}}
+    <!-- NAVBAR -->
+    <div class="w-full"
+        :class="scrolled 
+            ? 'bg-white border-b border-gray-100 shadow-md' 
+            : 'bg-transparent'">
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center transition-all duration-500" :class="scrolled ? 'h-18' : 'h-22'">
+        <!-- ✅ FIX: removed max-w-7xl (no unwanted side gap) -->
+        <div class="flex justify-between items-center h-20 px-4 md:px-8 transition-all duration-300">
 
-            {{-- Logo --}}
-            <a href="/" class="flex items-center space-x-3 group">
-                <div class="w-12 h-auto flex items-center justify-center text-white font-oswald font-bold text-xl transition-transform group-hover:scale-105">
-                    <img src="{{asset('assets/img/logos2.png')}}" alt="">
-                </div>
-                <div class="flex flex-col justify-center space-y-1">
-                    <span class="text-xl font-oswald  font-bold leading-none tracking-tight transition-colors duration-300"
+            <!-- LOGO -->
+            <a href="/" class="flex items-center space-x-3">
+                <img src="{{asset('assets/img/logos2.png')}}" class="w-12">
+
+                <div>
+                    <span class="text-lg font-bold transition-colors duration-300"
                         :class="scrolled ? 'text-steel' : 'text-white'">
                         Designs Pvt. Ltd.
                     </span>
-                    <span class="text-[9px] px-[1px] font-bold tracking-[0.25em] leading-none mt-0.5 transition-colors duration-300"
-                        :class="scrolled ? 'text-secondary' : 'text-secondary'">
+
+                    <p class="text-[9px] tracking-[0.25em] text-secondary">
                         BUILDING GREEN
-                    </span>
-                   
+                    </p>
                 </div>
             </a>
 
-            {{-- Desktop Navigation --}}
+            <!-- DESKTOP -->
             <nav class="hidden lg:flex items-center space-x-8">
-                <a href="/" class="text-sm font-bold uppercase tracking-widest transition-colors duration-300 border-b-2 border-transparent hover:border-secondary pb-1"
-                    :class="scrolled ? 'text-steel hover:text-primary' : 'text-white/90 hover:text-white'">Home</a>
-                <a href="#about" class="text-sm font-bold uppercase tracking-widest transition-colors duration-300 border-b-2 border-transparent hover:border-secondary pb-1"
-                    :class="scrolled ? 'text-steel hover:text-primary' : 'text-white/90 hover:text-white'">About</a>
-                <a href="#services" class="text-sm font-bold uppercase tracking-widest transition-colors duration-300 border-b-2 border-transparent hover:border-secondary pb-1"
-                    :class="scrolled ? 'text-steel hover:text-primary' : 'text-white/90 hover:text-white'">Services</a>
-                <a href="#contact" class="bg-secondary text-white px-7 py-2.5 rounded font-bold uppercase text-xs tracking-widest hover:bg-primary transition-all duration-300 shadow-lg hover:shadow-xl">
-                    Get a Quote
+                <a href="/" class="nav-link"
+                    :class="scrolled ? 'text-steel' : 'text-white'">Home</a>
+
+                <a href="#about" class="nav-link"
+                    :class="scrolled ? 'text-steel' : 'text-white'">About</a>
+
+                <a href="#services" class="nav-link"
+                    :class="scrolled ? 'text-steel' : 'text-white'">Services</a>
+
+                <a href="#contact"
+                    class="bg-secondary text-white px-6 py-2 rounded font-bold text-xs uppercase">
+                    Get Quote
                 </a>
             </nav>
 
-            {{-- Mobile button --}}
-            <button @click="open = !open" class="lg:hidden p-2 rounded-lg transition-colors flex items-center justify-center"
+            <!-- MOBILE BUTTON -->
+            <button @click="open = true"
+                class="lg:hidden text-2xl p-2"
                 :class="scrolled ? 'text-steel' : 'text-white'">
-                <i x-show="!open" class="ri-menu-3-fill text-2xl"></i>
-                <i x-show="open" class="ri-close-line text-2xl"></i>
+
+                <i class="ri-menu-3-line"></i>
             </button>
         </div>
     </div>
 
-    {{-- Mobile Menu --}}
-    <div x-show="open" x-cloak
-        x-transition:enter="transition ease-out duration-300"
-        x-transition:enter-start="opacity-0 -translate-y-2"
-        x-transition:enter-end="opacity-100 translate-y-0"
-        x-transition:leave="transition ease-in duration-200"
-        x-transition:leave-start="opacity-100 translate-y-0"
-        x-transition:leave-end="opacity-0 -translate-y-2"
-        class="lg:hidden bg-white border-t border-gray-100 shadow-2xl">
-        <div class="max-w-7xl mx-auto px-6 py-6 space-y-1">
-            <a @click="open = false" href="/" class="block py-3 px-4 text-steel font-bold text-lg hover:bg-surface rounded-lg transition-colors">Home</a>
-            <a @click="open = false" href="#about" class="block py-3 px-4 text-steel font-bold text-lg hover:bg-surface rounded-lg transition-colors">About Us</a>
-            <a @click="open = false" href="#services" class="block py-3 px-4 text-steel font-bold text-lg hover:bg-surface rounded-lg transition-colors">Services</a>
-            <div class="pt-3">
-                <a @click="open = false" href="#contact" class="block w-full py-4 bg-primary text-white text-center rounded-lg font-bold uppercase tracking-widest text-sm shadow-lg">Get a Quote</a>
+    
+   <div x-show="open" x-cloak
+    x-transition.opacity
+    class="fixed inset-0 z-50 bg-gradient-to-b from-white via-surface to-white text-steel flex flex-col">
+
+    <!-- TOP BAR WITH LOGO -->
+    <div class="flex justify-between items-center px-5 py-4 border-b border-gray-100">
+
+        <!-- LOGO -->
+        <a href="/" @click="open=false" class="flex items-center space-x-2">
+            <img src="{{asset('assets/img/logos2.png')}}" class="w-10">
+
+            <div class="flex flex-col">
+                <span class="text-sm font-bold">
+                Designs Pvt. Ltd.
+            </span>
+            <p class="text-[9px] tracking-[0.25em] text-secondary">
+                        BUILDING GREEN
+                    </p>
             </div>
-        </div>
+        </a>
+
+        <!-- CLOSE BUTTON -->
+        <button @click="open = false" class="text-2xl">
+            <i class="ri-close-line"></i>
+        </button>
     </div>
+
+    <!-- MENU ITEMS -->
+    <div class="flex-1 flex flex-col justify-center px-6">
+
+        <div class="space-y-6 text-lg font-medium text-center">
+
+            <a @click="open=false" href="/" 
+                class="block transition hover:text-primary">
+                Home
+            </a>
+
+            <a @click="open=false" href="#about" 
+                class="block transition hover:text-primary">
+                About
+            </a>
+
+            <a @click="open=false" href="#services" 
+                class="block transition hover:text-primary">
+                Services
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="px-6 pb-8">
+        <a @click="open=false" href="#contact"
+            class="block w-full text-center py-3 bg-primary text-white rounded-md font-semibold tracking-wide hover:bg-primary-dark transition">
+            Get a Quote
+        </a>
+    </div>
+
+</div>
+
 </header>
