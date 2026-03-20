@@ -35,7 +35,7 @@ new class extends Component
                         <span class="text-gra text-xs font-bold tracking-[0.3em] uppercase">Engineering Excellence</span>
                     </div>
 
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-8 leading-[1.05] tracking-tight">
+                    <h1 class="text-5xl sm:text-5xl lg:text-6xl xl:text-7xl font-semibold text-white mb-8 leading-[1.05] tracking-tight">
                         Precision Steel <br>
                         Design & <br>
                         <span class="text-gradient-s2s">Engineering</span>
